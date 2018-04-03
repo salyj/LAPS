@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="quote_object.js"></script>
+	<script type="text/javascript" src="functions.js"></script>
+	<title>Learning Algorithm for Preference Sorting</title>
+</head>
+<body>
+	<h1 style="text-align: center; color: white;">Learning Algorithm for Preference Sorting</h1>
+	<h2 style="text-align: center; color: white;"">Quote Generator</h2>
+	<div class="quote"></div>
+	<div class="accept"><h2>Accept</h2></div>
+	<div class="decline"><h2>Decline</h2></div>
+	<script>
+		var quote = document.getElementsByClassName("quote")[0];
+		var accept = document.getElementsByClassName("accept")[0];
+		var decline = document.getElementsByClassName("decline")[0];
+
+		randomizeCurrent();
+		quote.innerHTML = quotes[current].quote + "<br /> -" + quotes[current].attributed;
+
+		accept.addEventListener("click", function() {
+			quotes[current].accept();
+			quotes[current].calcPriority();
+			sortQuotes();
+			previous = current;
+			randomizeCurrent();
+			quote.innerHTML = quotes[current].quote + "<br /> -" + quotes[current].attributed;
+			displayQuotes();
+		});
+
+		decline.addEventListener("click", function() {
+			quotes[current].decline();
+			quotes[current].calcPriority();
+			sortQuotes();
+			previous = current;
+			randomizeCurrent();
+			quote.innerHTML = quotes[current].quote + "<br /> -" + quotes[current].attributed;
+			displayQuotes();
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+	background-color: black;
+}
+.quote {
+	max-width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	height: 200px;
+	text-align: center;
+	color: white;
+	background-color: #646464;
+	font-size: 2em;
+	padding: 2%;
+	border: 2px solid white;
+	border-radius: 10px 10px 0 0;
+}
+.accept {
+	width: 15%;
+	height: 50px;
+	margin-left: 20%;
+	margin-right: 15%;
+	background-color: #12a412;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	padding-bottom: 1em;
+	border-radius: 0 0 10px 10px;
+}
+.accept:hover {
+	background-color: #96ea96;
+}
+.decline {
+	width: 15%;
+	height: 50px;
+	margin-left: 15%;
+	margin-right: 20%;
+	float: right;
+	background-color: #a41212;
+	cursor: pointer;
+	text-align: center;
+	padding-bottom: 1em;
+	border-radius: 0 0 10px 10px;
+}
+.decline:hover {
+	background-color: #ea9696;
+}
